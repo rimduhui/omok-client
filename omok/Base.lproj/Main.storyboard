@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gat-vh-2BY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ALEGO-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="omok" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="3ou-i4-Vy1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXC-Mt-tuO">
+                                <rect key="frame" x="78" y="225" width="219" height="217"/>
+                                <state key="normal" backgroundImage="play_button"/>
+                                <connections>
+                                    <segue destination="djg-Si-Jxp" kind="show" id="Vpm-tD-eN2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wXC-Mt-tuO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QGx-fs-YPT"/>
+                            <constraint firstAttribute="trailing" secondItem="3ou-i4-Vy1" secondAttribute="trailing" id="YzB-dQ-qxV"/>
+                            <constraint firstItem="wXC-Mt-tuO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ceq-lG-6Gj"/>
+                            <constraint firstItem="3ou-i4-Vy1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dlR-hh-GWm"/>
+                            <constraint firstItem="3ou-i4-Vy1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gob-hX-A5v"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3ou-i4-Vy1" secondAttribute="bottom" id="yv8-iy-4jm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ALEGO" id="TDS-5s-b1U">
+                        <barButtonItem key="backBarButtonItem" title="BACK" id="WWs-xJ-jZE"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="-60"/>
+        </scene>
+        <!--ALEGO-->
+        <scene sceneID="o5L-6a-ivd">
+            <objects>
+                <viewController id="djg-Si-Jxp" customClass="OmokPlayController" customModule="omok" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oVJ-Z3-dTb"/>
+                        <viewControllerLayoutGuide type="bottom" id="bpX-RT-Vgf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c6v-en-kzZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="IAz-IQ-Bae">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pCk-2C-0Ux" customClass="PlateView" customModule="omok" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="184" width="375" height="348"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="il3-5n-z38">
+                                <rect key="frame" x="288" y="72" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Connection"/>
+                                <connections>
+                                    <action selector="sendPythonServer:" destination="djg-Si-Jxp" eventType="touchUpInside" id="ob3-oz-g0D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IAz-IQ-Bae" firstAttribute="leading" secondItem="c6v-en-kzZ" secondAttribute="leading" id="8w6-pP-QJz"/>
+                            <constraint firstItem="IAz-IQ-Bae" firstAttribute="top" secondItem="oVJ-Z3-dTb" secondAttribute="bottom" id="hiO-dW-Dyk"/>
+                            <constraint firstAttribute="trailing" secondItem="IAz-IQ-Bae" secondAttribute="trailing" id="lcE-Ya-Gd0"/>
+                            <constraint firstItem="bpX-RT-Vgf" firstAttribute="top" secondItem="IAz-IQ-Bae" secondAttribute="bottom" id="y9z-01-pQn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ALEGO" id="1Li-G0-OOl">
+                        <barButtonItem key="backBarButtonItem" title="BACK" id="xHM-F5-A0U"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="plateView" destination="pCk-2C-0Ux" id="pce-72-lLm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ede-H3-zHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="-59.820089955022496"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tCw-Rw-69L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gat-vh-2BY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cvX-2J-ML1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w0z-jW-QOc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkA-3t-9Cc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="361"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_image" width="728" height="383"/>
+        <image name="play_button" width="219" height="217"/>
+    </resources>
+</document>
